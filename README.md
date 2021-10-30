@@ -8,6 +8,7 @@
   - Ubuntu 16.04（Xenial） + ROS 1 Kinetic
   - Ubuntu 18.04（Bionic） + ROS 1 Melodic
   - Ubuntu 20.04（Focal） + ROS 1 Noetic
+  - ARM 架构内核，将SimpleSources文件夹中的source.list中，所有源中，ubuntu改为ubuntu-ports即可
 
 - 执行过程同时输出至终端及 log 文件
 
