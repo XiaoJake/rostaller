@@ -36,7 +36,20 @@ cd rostaller
 chmod +x ./run.sh
 ```
 
-## 2.4 运行脚本
+## 2.4 可选项-延长sudo记住密码打时长
+
+```bash
+#每次使用sudo命令时，输入密码，系统默认只会记住5分钟，5分钟内运行sudo相关命令都不会要求输入密码，5分钟后就需要人手动再次输入密码。
+#我们装ros的过程肯定不止5分钟，防止脚本执行过程中卡在输入密码的某一步不动，建议延长这个时间到30分钟
+
+sudo vim /etc/sudoers
+#找到 Defaults env_reset 这一行
+#将其改成 Defaults env_reset, timestamp_timeout=30
+#强制保存退出 :wq!
+
+```
+
+## 2.5 运行脚本
 
 ```bash
 ./run.sh
